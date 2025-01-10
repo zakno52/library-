@@ -4,26 +4,40 @@ let bookPage = document.getElementById("page");
 let bookSub = document.getElementById("submit");
 let newBook = document.getElementById("newBook");
 let dialog = document.getElementById("dialog");
+let closeBtn = document.getElementById("close");
 
 newBook.addEventListener("click", () => {
   dialog.showModal();
 });
+closeBtn.addEventListener("click", (event) => {
+  dialog.close();
+  event.preventDefault();
+});
 
 const myLibrary = [];
+let c = 0;
 
 // Ensure your array (data storage) and DOM manipulation (display logic) are independent.
 // Example: Update the array when you add/remove books, then call the display function to refresh the screen.
 
 function Book(title, author, page) {
   // the constructor...
+  let bookShelf = document.querySelectorAll(".bookBox")[0];
+  console.log(bookShelf);
   this.title = title;
   this.author = author;
   this.page = page;
   // 3 Adds the object to the myLibrary array.
   myLibrary.push(this);
-  let c = 0;
-  newBook.after(myLibrary[c].title, myLibrary[c].author, myLibrary[c].page);
-  c += 1;
+  let newBookBox = document.createElement("div");
+  newBookBox.classList.add("bookBox");
+  newBookBox.innerHTML = `<div>Book Title: ${myLibrary[c].title}</div>
+  <div>Book Author: ${myLibrary[c].author}</div>
+  <div>Book Pages: ${myLibrary[c].page}</div>`;
+
+  bookShelf.before(newBookBox);
+
+  c = c + 1;
 }
 bookSub.addEventListener("click", (event) => {
   event.preventDefault();
@@ -34,7 +48,7 @@ function addBookToLibrary(title, author, page) {
   // 2 Creates a new book object.
   let createBook = new Book(title, author, page);
 
-  console.log(myLibrary);
+  // console.log(myLibrary);
 }
 
 // What you need to do:

@@ -1,0 +1,90 @@
+body {
+  background-color: #0e0e18;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+.content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(17rem, 1fr));
+  justify-items: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+.bookBox {
+  background-color: #1d1f25;
+  height: 20rem;
+  width: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookImage {
+  height: 11rem;
+  width: 9rem;
+  background-color: #26282a;
+}
+
+#newBook {
+  height: 2rem;
+  width: 9rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+dialog {
+  font-size: 1.3rem;
+  width: 23rem;
+  background-color: #38383976;
+  border: none;
+  color: white;
+}
+dialog::backdrop {
+  background-color: #11131ee8;
+}
+dialog form {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 25px;
+}
+dialog form > input {
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+#submit {
+  background-color: rgba(0, 82, 52, 0.559);
+  height: 3rem;
+  color: white;
+  border: none;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 0;
+}
+#read {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.dialogBtns > button {
+  height: 3rem;
+  color: white;
+  background-color: #606060;
+  border: none;
+}
+.dialogBtns {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dialogBtns * {
+  width: 9rem;
+  padding-bottom: 3px;
+}

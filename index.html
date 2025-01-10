@@ -3,16 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <button id="newBook">New Book</button>
+    <div class="content" id="content">
+      <div class="bookBox" id="bookBox">
+        <div class="bookImage">
+          <svg role="presentation" viewBox="0 0 24 24">
+            <title>file-image-outline</title>
+            <path
+              d="M14,2L20,8V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2H14M18,20V9H13V4H6V20H18M17,13V19H7L12,14L14,16M10,10.5A1.5,1.5 0 0,1 8.5,12A1.5,1.5 0 0,1 7,10.5A1.5,1.5 0 0,1 8.5,9A1.5,1.5 0 0,1 10,10.5Z"
+              style="fill: white; --darkreader-inline-fill: currentcolor"
+              data-darkreader-inline-fill=""
+            ></path>
+          </svg>
+        </div>
+
+        <button id="newBook">+ New Book</button>
+      </div>
+      <!-- <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div>
+      <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div>
+      <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div>
+      <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div>
+      <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div>
+      <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div>
+      <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div>
+      <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div>
+      <div class="bookBox">
+        <button id="newBook">New Book</button>
+      </div> -->
+    </div>
+
     <dialog id="dialog">
       <form action="">
-        <input id="title" type="text" />
-        <input id="author" type="text" />
-        <input id="page" type="number" />
-        <input name="submit" type="submit" id="submit" value="Add" />
+        <h3>Add a new book</h3>
+        <label for="title">Book Title:</label>
+        <input id="title" type="text" required />
+        <label for="author">Book Author:</label>
+        <input id="author" type="text" required />
+        <label for="page">Book Pages:</label>
+        <input id="page" type="number" required />
+        <div>
+          <label for="read">Read the book?:</label>
+          <input type="checkbox" id="read" />
+        </div>
+        <div class="dialogBtns">
+          <input name="submit" type="submit" id="submit" value="Add" />
+          <button class="close" id="close">Close</button>
+        </div>
       </form>
     </dialog>
 
