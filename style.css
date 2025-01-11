@@ -2,7 +2,32 @@ body {
   background-color: #0e0e18;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+  height: 100vh;
 }
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
+  margin-top: 0;
+  align-content: center;
+  align-items: baseline;
+}
+h1 {
+  margin: 0;
+}
+#newBook {
+  height: 2rem;
+  width: 9rem;
+  /* margin-top: 20px; */
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #007a90;
+  color: white;
+  border: none;
+  padding-bottom: 3px;
+  margin-left: 2rem;
+}
+
 .content {
   display: grid;
   align-items: center;
@@ -11,6 +36,11 @@ body {
   justify-items: center;
   gap: 2rem;
   padding: 3rem;
+}
+.bookBox {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='256' height='256' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cg style='stroke:none;stroke-width:0;stroke-dasharray:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;fill:none;fill-rule:nonzero;opacity:0.3;' transform='translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)'%3E%3Cpath d='M76.236 90H23.19c-6.3 0-11.426-5.126-11.426-11.427 0-6.3 5.126-11.426 11.426-11.426h40.849c1.104 0 2 0.896 2 2s-0.896 2-2 2H23.19c-4.095 0-7.426 3.331-7.426 7.426S19.096 86 23.19 86h53.046c1.104 0 2 0.896 2 2s-0.896 2-2 2z' style='stroke:none;stroke-width:1;stroke-dasharray:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;fill:rgb(255,255,255);fill-rule:nonzero;opacity:0.3;' transform='matrix(1 0 0 1 0 0)' stroke-linecap='round'/%3E%3Cpath d='M13.764 80.573c-1.104 0-2-0.896-2-2V11.565C11.764 5.188 16.952 0 23.33 0h52.907c1.104 0 2 0.896 2 2v67.147c0 1.104-0.896 2-2 2H64.039c-1.104 0-2-0.896-2-2s0.896-2 2-2h10.197V4H23.33c-4.171 0-7.565 3.394-7.565 7.565v67.008c0 1.104-0.896 2-2 2z' style='stroke:none;stroke-width:1;stroke-dasharray:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;fill:rgb(255,255,255);fill-rule:nonzero;opacity:0.3;' transform='matrix(1 0 0 1 0 0)' stroke-linecap='round'/%3E%3Cpath d='M76.236 90c-1.104 0-2-0.896-2-2V65.52c0-1.104 0.896-2 2-2s2 0.896 2 2V88C78.236 89.104 77.341 90 76.236 90z' style='stroke:none;stroke-width:1;stroke-dasharray:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;fill:rgb(255,255,255);fill-rule:nonzero;opacity:0.3;' transform='matrix(1 0 0 1 0 0)' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .bookBox {
   background-color: #1d1f25;
@@ -25,16 +55,45 @@ body {
 .bookImage {
   height: 11rem;
   width: 9rem;
-  background-color: #26282a;
 }
-
-#newBook {
-  height: 2rem;
-  width: 9rem;
-  margin-top: 20px;
+.bookTitle {
+  margin-top: 3px;
   font-weight: bold;
 }
-
+.author {
+  margin: 3px 0;
+  font-style: italic;
+}
+.green {
+  color: #00794c;
+}
+.red {
+  color: #8f2207;
+}
+.bookBox > div {
+  margin-top: 5px;
+}
+.bookBox button {
+  margin-top: 10px;
+  border: none;
+  height: 2rem;
+  width: 9rem;
+}
+.bookBox > *:last-child {
+  background-color: #8f2207aa;
+  color: white;
+}
+.bookBox :nth-child(5) {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  background-color: #ffffffd9;
+}
+.bookLogo {
+  position: absolute;
+  left: 16.5rem;
+  height: 13rem;
+  top: 11rem;
+}
 dialog {
   font-size: 1.3rem;
   width: 23rem;
@@ -55,7 +114,7 @@ dialog form > input {
   margin-bottom: 20px;
 }
 #submit {
-  background-color: rgba(0, 82, 52, 0.559);
+  background-color: #00794c;
   height: 3rem;
   color: white;
   border: none;
@@ -75,7 +134,7 @@ h3 {
 .dialogBtns > button {
   height: 3rem;
   color: white;
-  background-color: #606060;
+  background-color: #7e7e7e;
   border: none;
 }
 .dialogBtns {
@@ -88,3 +147,7 @@ h3 {
   width: 9rem;
   padding-bottom: 3px;
 }
+
+/* .bookText {
+ 
+} */
